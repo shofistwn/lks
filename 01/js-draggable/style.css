@@ -1,0 +1,19 @@
+#draggable {
+    position: absolute;
+    width: 150px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border: 1px solid pink;
+    color: deeppink;
+    z-index: 9;
+    cursor: move;
+}
+#draggable-header {
+    /* position: absolute; */
+    z-index: 10;
+
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+  }
