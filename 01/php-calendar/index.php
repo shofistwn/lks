@@ -115,15 +115,16 @@ class Calendar
             $cellContent = null;
         }
 
+        // mereturn hari
         if ($cellNumber % 7 == 1) {
             return '<div class="fc-row"><div><span class="fc-date">' . $cellContent . '</span></div>';
         } else if ($cellNumber % 7 == 0) {
             return '<div><span class="fc-date">' . $cellContent . '</span></div></div>';
-        } else if ($cellContent == date("d")) {
+        } elseif ($this->currentDate == date('Y-m-d')) {
+            // jika tanggal hari ini, maka beri highlight
             return '<div class="fc-today"><span class="fc-date">' . $cellContent . '</span></div>';
         }
 
-        // hari
         return '<div><span class="fc-date">' . $cellContent . '</span></div>';
     }
 
@@ -234,7 +235,6 @@ class Calendar
     $calendar = new Calendar(date("Y m d"));
     echo $calendar->show();
     ?>
-
 </body>
 
 </html>
