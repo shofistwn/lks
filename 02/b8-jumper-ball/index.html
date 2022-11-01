@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumping Ball</title>
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .ball {
+            width: 240px;
+            height: 240px;
+            background-color: red;
+            border-radius: 50%;
+            margin: 0 auto;
+            animation: ball 1s 1s infinite ease-in-out;
+        }
+
+        @keyframes ball {
+            0% {
+                height: 180px;
+                transform: translateY(0);
+            }
+
+            50% {
+                height: 240px;
+                transform: translateY(-300px);
+            }
+            
+            100% {
+                height: 180px;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ball"></div>
+</body>
+
+</html>
